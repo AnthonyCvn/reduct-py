@@ -302,7 +302,7 @@ class Bucket:
 
         Examples:
             >>> async for record in bucket.subscribes("entry-1"):
-            >>>     data: bytes = record.read_all()
+            >>>     data: bytes = await record.read_all()
             >>>     # or
             >>>     async for chunk in record.read(n=1024):
             >>>         print(chunk)
